@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://getbootstrap.com/2.3.2/examples/carousel.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>EBAS-submit prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./Carousel Template · Bootstrap_files/bootstrap.css" rel="stylesheet">
+    <link href="./Carousel Template · Bootstrap_files/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+    body {
+      /*padding-bottom: 40px;*/
+      color: #5a5a5a;
+	/*color: #fff;*/
+ /* background-color: #333;*/
+text-align: center;
+
+    }
+	
+.inner {
+  padding: 30px;
+}
+
+.cover {
+  padding: 0 20px;
+}
+
+
+	/* site-wrapper with background color*/
+	.site-wrapper {
+  		display: table;
+  		width: 100%;
+  		height: 100%; /* For at least Firefox */
+  		min-height: 100%;
+  		-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          		box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+	}
+	/*end site-wrapper*/
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+      background-color: #636363;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 14px;
+        padding: 7px 12px;
+      }
+
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <!--<link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png">-->
+  <style id="holderjs-style" type="text/css">.holderjs-fluid {font-size:16px;font-weight:bold;text-align:center;font-family:sans-serif;margin:0}</style></head>
+
+  <body>
+<div class="site-wrapper">
+<br>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Help</h1>
+            <p class="lead">Different channels for getting help related to EBAS</p>
+            <p class="lead">
+            </p>
+          </div>
+
+<br>
+<br>
+<br>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="/home/ror/repos/prototypig/ebas-submit/img/submit-tool.png" style="width: 140px; height: 140px;">
+          <h2>Ask a question related to file submission errors</h2>
+          <p>Questions posted here should only be used to troubleshoot file submission errors or application specific errors for the ebas-submit-tool.</p>
+          <p><a class="btn" href="https://github.com/ebas-submission-tool/troubleshooting/issues">Post a question »</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="/home/ror/repos/prototypig/ebas-submit/img/user_feedback.png" style="width: 140px; height: 140px;">
+          <h2>User feedback</h2>
+          <p>Portal for giving user feedback to the EBAS project</p>
+          <p><a class="btn" href="http://ebas-feedback.nilu.no/login_page.php">Give feedback »</a></p>
+        </div><!-- /.span4 -->
+
+       <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="/home/ror/repos/prototypig/ebas-submit/img/contact.png" style="width: 140px; height: 140px;">
+          <h2>Contact persons</h2>
+          <p>If you have a specific person you want to contact regarding the EBAS project the following link will give you contact information of the key people involved with EBAS</p>
+          <p><a class="btn" href="http://www.nilu.no/projects/ccc/about/">Contact »</a></p>
+        </div>
+
+</div> <!--Breaking first row-->
+      <!--<div class="row">
+	<div class="span4">
+          <img data-src="holder.js/140x140" alt="140x140" src="/home/ror/repos/prototypig/ebas-submit/img/faq.svg" style="width: 70px; height: 70px;">
+          <h2>FAQ</h2>
+          <p>Frequently asked questions related to file submission</p>
+          <p><a class="btn" href="http://getbootstrap.com/2.3.2/examples/carousel.html#">Take me to the FAQ »</a></p>
+        </div><!-- /.span4 -->
+	<!--<div class="span4">
+          <img data-src="holder.js/140x140" alt="140x140" src="/home/ror/repos/prototypig/ebas-submit/img/project.svg" style="width: 70px; height: 70px;">
+          <h2>List of project specific documentation</h2>
+          <p>Links to project specific documents</p>
+          <p><a class="btn" href="http://getbootstrap.com/2.3.2/examples/carousel.html#">List projects »</a></p>
+        </div><!-- /.span4 -->
+	<!--<div class="span4">
+          <img data-src="holder.js/140x140" alt="140x140" src="/home/ror/repos/prototypig/ebas-submit/img/policy.svg" style="width: 70px; height: 70px;">
+          <h2>Data policy</h2>
+          <p>Data policy documentation for EBAS</p>
+          <p><a class="btn" href="http://getbootstrap.com/2.3.2/examples/carousel.html#">Inform me »</a></p>
+        </div> /.span4 -->
+
+      <!--</div><!-- /.row --><!--Breaking second row-->
+
+      <hr class="featurette-divider">
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="http://getbootstrap.com/2.3.2/examples/carousel.html#">Back to top</a></p>
+        <p>© 2016 EBAS-NILU. All rights reserved. <a href="http://getbootstrap.com/2.3.2/examples/carousel.html#">Privacy</a> · <a href="http://getbootstrap.com/2.3.2/examples/carousel.html#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Carousel Template · Bootstrap_files/jquery.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-transition.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-alert.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-modal.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-dropdown.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-scrollspy.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-tab.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-tooltip.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-popover.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-button.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-collapse.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-carousel.js"></script>
+    <script src="./Carousel Template · Bootstrap_files/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="./Carousel Template · Bootstrap_files/holder.js"></script>
+  
+</div>
+</body></html>
