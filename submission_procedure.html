@@ -36,8 +36,8 @@ body {
   		width: 100%;
   		height: 100%; /* For at least Firefox */
   		min-height: 100%;
-  		-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          		box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  		/*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          		box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 	}
 	/*end site-wrapper*/
 
@@ -312,15 +312,13 @@ span.glyphicon {
 
   <body>
 
+                 <img src="img/static_header_prototype.png" >  
 
 <div class="container marketing">
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Data submission</h1>
-            <p class="lead">Data submission procedure for EBAS</p>
-            <p class="lead">
-            </p>
-          </div>
+              <div style="margin:30px;" class="row">
+            <h3 style="float:left;" class="cover-heading">Data submission procedure for EBAS</h3>
+    </div>
 
 <br>
 <br>
@@ -339,13 +337,15 @@ span.glyphicon {
   <div class="panel-body">
        <p> If the framework your station is associated with has a collaboration agreement with the WMO GAW programme, you need to register your station with the GAW station information system (GAWSIS) by filling out a request form.</p>
 
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 	Learn more
 </a>
 
 <div class="collapse" id="collapseExample">
   <div class="well">
-
+Not registered with GAWSIS yet?
+If you are a GAW country contact or a primary station contact, or if you would like to register a new station with GAWSIS, you can get registered with GAWSIS. Ask a registered user to log-in and add your name to the list of contacts for stations you are responsible for and/or involved with.
+Alternatively, please send an e-mail to the GAWSIS administrator, providing (i) your full name, organization, and role and (ii) for each station, the name of the station and if you are (iii) the responsible GAW country contact, or (iv) the responsible primary station contact. Please allow 2 weeks for a response. Thank you! 
   </div>
 </div>
 
@@ -364,7 +364,7 @@ span.glyphicon {
   </div>
   <div class="panel-body">
 <p>Please establish the initial contact with EBAS by writing an e-mail to ebas@nilu.no. In your mail, please indicate the station you are intending to report data for, the GAWSIS station ID if relevant, and the parameters you intend to report. In return, you will receive three further IDs: 1) the EBAS station code; 2) the EBAS platform code; 3) a code for your lab analysing the data, which you will need for the metadata in your submission. The three letter GAW IDs and the IDs used in the CLRTAP EMEP database EBAS were introduced independently and are maintained for consistency.</p>
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 	Learn more
 </a>
 
@@ -380,7 +380,7 @@ span.glyphicon {
   </div>
   <div class="panel-body">
 <p>This step will probably take longest of all steps in this data submission guideline, and is prerequisite for any further use of the data. Please make sure that you followed the respective standard operating procedure (SOP) valid for your instrument, both during data collection and data processing and evaluation. There will likely be periods for which the data is invalid due to calibrations or malfunctions, and there may be additional conditions (activity around the station, etc.) you will want to convey to the data user. EBAS uses a system of flags for this purpose. Each flag is assigned a three digit integer number. A list of these flags can be found at http://www.nilu.no/projects/ccc/flags/flags.html. The list of flags is comprehensive, but may still not be complete. If there is a condition you think is not covered, please send an e-mail to ebas@nilu.no for guidance or an extension of the list of flags.</p>
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 	Learn more
 </a>
 
@@ -402,7 +402,7 @@ span.glyphicon {
 <p>If you have submitted data for a given parameter to EBAS before, you can copy the header from the previous year to start with, and update at least the fields containing a date or time. However, please make sure to check through the metadata items and update them in case any changes occured in your setup. Especially for later trend analysis, it is rather important that any changes that may have caused a rupture in the dataset are documented in the metadata.
 </p>
 
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 	Learn more
 </a>
 
@@ -418,7 +418,7 @@ span.glyphicon {
   </div>
   <div class="panel-body">
 <p>The data section of an EBAS NASA-Ames file consists of a fixed width, fixed number format ASCII table, with the number formats specified in the file header. Please refer to the parameter specific pages for examples (menu on left). Once the data section is constructed, please join header and data section into one file, and name the file using the file name stated in the header.</p>
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 	Learn more
 </a>
 
@@ -433,7 +433,7 @@ span.glyphicon {
   </div>
   <div class="panel-body">
 <p>You can use our web-based tool to check file formats will be made available. Please use this to check if your files are correctly formatted.</p>
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 	Learn more
 </a>
 
@@ -447,7 +447,7 @@ span.glyphicon {
   <div class="panel-body">
 <p>The files containing the data submissions are uploaded to EBAS’s anonymous FTP-site, which is accessible at:
 ftp://ebas-submissions.nilu.no/incoming</p>
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 	Learn more
 </a>
 
